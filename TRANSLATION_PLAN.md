@@ -75,7 +75,6 @@ For each extracted JSON file:
 - Keep code blocks (` ``` `) unchanged
 - Maintain line-by-line structure (newlines must match)
 - Preserve HTML tags and image embeds
-- **Formality**: Use formal Korean (합니다체) - appropriate for educational materials
 - **Technical terms**: Translate to Korean equivalents (e.g., 'bootstrap' → '부트스트랩', 'mean' → '평균')
 - Match existing translation style from chapters 10-13
 
@@ -195,7 +194,6 @@ git commit -m "Add Korean translations for chapters 14-17
 
 - Translated 25 notebooks (chapters 14-17)
 - 809 total cells, 376 markdown cells translated
-- Used formal Korean (합니다체) style
 - Translated technical terms to Korean
 - Preserved all code execution results and outputs
 - Modified Google Drive paths to local data/ paths"

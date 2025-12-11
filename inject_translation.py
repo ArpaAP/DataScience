@@ -54,8 +54,12 @@ def inject_translations(original_path, translation_path, output_path):
     for cell_data in translation_data['markdown_cells']:
         cell_index = cell_data['cell_index']
         translation = cell_data.get('translation')
+        source = cell_data.get('source_lines', [])
 
-        if translation is None or translation == []:
+        # Allow empty translations only if source is also empty (valid empty cell)
+        if translation is None:
+            missing_translations.append(cell_index)
+        elif translation == [] and source != []:
             missing_translations.append(cell_index)
         else:
             translation_map[cell_index] = translation
